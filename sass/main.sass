@@ -1,0 +1,224 @@
+@import "../sass/bourbon/bourbon"
+
+@mixin kerning($kerning)
+	letter-spacing: $kerning + px
+
+body
+	background: url(../img/back.png) repeat
+	+kerning(1)
+
+/* ================ */
+/* ==== Loader ==== */
+/* ================ */
+.loader
+	z-index: 9999
+	position: fixed
+	left: 0
+	right: 0
+	top: 0
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	width: 100%
+.loader_inner
+	position: absolute
+	left: 50%
+	top: 50%
+	height: 60px
+	width: 60px
+	margin-top: -30px
+	margin-left: -30px
+	background-image: url("../img/preloader.gif")
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	background-color: #fff
+
+/* ==================== */
+/* ==== Navigation ==== */
+/* ==================== */
+
+.navbar-nav
+	li
+		a.active
+			color: #fff
+
+.navbar-main
+	z-index: 100
+	ul
+		float: none
+		text-align: center
+	span.navbar-brand
+		// position: absolute
+		// left: 0
+		// right: 0
+		color: #fff
+		float: none
+		text-align: center
+		background-color: #222
+
+.toggle_menu
+	display: none
+	z-index: 120
+	position: fixed
+	top: 20px
+	right: 20px
+	height: 50px
+	width: 50px
+	border: none
+	cursor: pointer
+	background: rgba(34, 34, 34, 0.4)
+	&:hover
+		border: 2px solid #333
+		transition: 0.5s
+// 
+// 
+// sandwich
+// 
+// 
+$w: 30px
+$h: 4px
+
+.sandwich
+	z-index: 120
+	display: block 
+	width: $w
+	height: $w
+	position: absolute
+	top: 2px
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+.sw-topper
+	display: block
+	position: relative
+	top: 0
+	width: $w 
+	height: $h
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	// transition: transform 0.5s, top 0.2s
+	-webkit-transition: transform 0.5s, top 0.2s
+	-moz-transition: transform 0.5s, top 0.2s
+	-o-transition: transform 0.5s, top 0.2s
+	transition: transform 0.5s, top 0.2s  
+	/* transition-delay: 0.2s, 0s; */
+.sw-bottom
+	display: block
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 2
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	// transition: transform 0.5s, top 0.2s
+	-webkit-transition: transform 0.5s, top 0.2s
+	-moz-transition: transform 0.5s, top 0.2s
+	-o-transition: transform 0.5s, top 0.2s
+	transition: transform 0.5s, top 0.2s
+	// transition-delay: 0.2s, 0s
+	-webkit-transition-delay: 0.2s, 0s
+	-moz-transition-delay: 0.2s, 0s
+	-o-transition-delay: 0.2s, 0s
+	transition-delay: 0.2s, 0s
+.sw-footer
+	display: block
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 4
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	// transition: all 0.5s
+	-webkit-transition: all 0.5s
+	-moz-transition: all 0.5s
+	-o-transition: all 0.5s
+	transition: all 0.5s
+	// transition-delay: 0.1s
+	-webkit-transition-delay: 0.1s
+	-moz-transition-delay: 0.1s
+	-o-transition-delay: 0.1s
+	transition-delay: 0.1s
+.sandwich.active_sw 
+	.sw-topper
+		top: 12px
+		// transform: rotate(140deg)
+		-webkit-transform: rotate(140deg)
+		-moz-transform: rotate(140deg)
+		-o-transform: rotate(140deg)
+		transform: rotate(140deg)
+	.sw-bottom
+		top: 8px
+		// transform: rotate(-140deg)
+		-webkit-transform: rotate(-140deg)
+		-moz-transform: rotate(-140deg)
+		-o-transform: rotate(-140deg)
+		transform: rotate(-140deg)
+	.sw-footer
+		opacity: 0
+		top: 0
+		// transform: rotate(180deg)
+		-webkit-transform: rotate(180deg)
+		-moz-transform: rotate(180deg)
+		-o-transform: rotate(180deg)
+		transform: rotate(180deg)
+
+/* ================= */
+/* ==== Content ==== */
+/* ================= */
+
+#header
+	background: url(../img/bg.jpg) no-repeat #6997D3
+	background-size: cover
+	.header_table
+		display: inline-table
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		.header_row
+			display: table-row
+			.header_cell
+				display: table-cell
+				text-align: center
+				vertical-align: middle
+				h1
+					display: inline-block
+					// margin: 20px
+					// text-align: center
+					padding: 10px 35px
+					color: #fff
+					border: 8px solid #fff
+					text-transform: uppercase
+					font-weight: bold
+					font-size: 2.5em
+					background-color: rgba(0,0,0,.3)
+					// box-shadow: rgba(0,0,0,.2) 0 0 0 1000px
+				p
+					margin: 0
+					text-transform: uppercase
+					font-size: 14px
+					color: #fff
+					// text-align: center
+
+#services
+	background-color: #354551
+	.list_services
+		color: #fff
+		list-style: none
+		margin-top: 100px
+		padding: 0 20px
+		li
+			padding: 5px
+			border-bottom: 2px solid #fff
+			font-size: 1.2em
+			background-color: transparent
+#portfolio
+	background-color: #456
+#contacts
+	background-color: #666

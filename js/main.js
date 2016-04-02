@@ -1,0 +1,78 @@
+$(window).load(function() { 
+	$(".loader_inner").fadeOut(); 
+	$(".loader").delay(400).fadeOut("slow"); 
+});
+
+$(document).ready(function() {
+	
+	function heightDetect() {
+		$(".row").css("height", $(window).height());
+		$(".header_table").css("height", $(window).height());
+	};
+	
+	$(window).resize(function() {
+		heightDetect();
+	});
+
+	function scroll() {
+		var link = $(this).attr("href");
+		var str_link = "a[href*='" + link + "']";
+		$(str_link).mPageScroll2id();
+		onClickToggleMenu();
+		// $("ul.navbar-nav li a").removeClass('active');
+		// $(this).addClass('active');
+
+	};
+
+	function navToggleOnScroll() {
+		var heightDoc = $(document).height();
+		var heightPage = $(window).height();
+		var heightTop = $(window).scrollTop();
+		switch (true) {
+		   case heightTop>=0 && heightTop<heightPage:
+		      $("ul.navbar-nav li a").removeClass('active');
+		      $("a[href='#header']").addClass('active');
+		      break;
+		   case heightTop>=heightPage && heightTop<heightPage*2:
+		      $("ul.navbar-nav li a").removeClass('active');
+		      $("a[href='#services']").addClass('active');
+		      break;
+		    case heightTop>=heightPage*2 && heightTop<heightPage*3:
+		      $("ul.navbar-nav li a").removeClass('active');
+		      $("a[href='#portfolio']").addClass('active');
+		      break;
+		    case heightTop>=heightPage*3 && heightTop<heightDoc:
+		      $("ul.navbar-nav li a").removeClass('active');
+		      $("a[href='#contacts']").addClass('active');
+		      break;
+		};
+	};
+
+	function onClickToggleMenu() {
+		if ($(".sandwich").is(":visible")) {
+			if ($(".sandwich").is(".active_sw")) {
+				$(".sandwich").removeClass("active_sw");
+				$("nav.navbar-main").fadeOut(600).removeClass("fadeInUp animated");
+			} else {
+				$(".sandwich").addClass("active_sw");
+				$("nav.navbar-main").fadeIn(600).addClass("fadeInUp animated");
+			};
+		};
+	};
+
+	heightDetect();
+	
+	$("ul.navbar-nav li a").click(scroll);
+
+	$(".toggle_menu").click(onClickToggleMenu);
+
+	$(document).scroll(navToggleOnScroll);
+
+	// function test() {
+	// 	var h = $(document).height();
+	// 	console.log(h/4);
+	// };
+
+	// test();
+
+});

@@ -1,0 +1,46 @@
+/*==========  Desktop First Method  ========== */
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+  nav.navbar-main {
+    display: none; }
+    nav.navbar-main span.navbar-brand {
+      position: absolute;
+      left: 0;
+      right: 0;
+      color: #fff;
+      float: none;
+      text-align: center;
+      background-color: #222; }
+
+  div.toggle_menu {
+    display: block; }
+
+  #services .list_services {
+    margin-top: 30px;
+    padding: 0 5px; } }
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  #services .list_services li {
+    font-size: 1em; } }
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  #services .list_services li {
+    padding: 0;
+    border-bottom: 1px solid #fff;
+    font-size: 0.9em; } }
+/*==========  Mobile First Method  ========== */
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  nav.navbar-main {
+    display: block; }
+
+  div.toggle_menu {
+    display: none; } }
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
+
+/*# sourceMappingURL=media.css.map */
