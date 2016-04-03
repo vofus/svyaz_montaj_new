@@ -60,11 +60,19 @@ $(document).ready(function() {
 		};
 	};
 
+	function openModal() {
+		var imgSrc = $(this).children("img").attr("src");
+		$("div.fraim img").attr('src', imgSrc);
+		console.log(imgSrc);
+	};
+
 	heightDetect();
 	
 	$("ul.navbar-nav li a").click(scroll);
 
 	$(".toggle_menu").click(onClickToggleMenu);
+
+	$("#portfolio a").click(openModal);
 
 	$(document).scroll(navToggleOnScroll);
 

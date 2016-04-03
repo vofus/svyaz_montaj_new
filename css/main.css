@@ -2,6 +2,13 @@ body {
   background: url(../img/back.png) repeat;
   letter-spacing: 1px; }
 
+/* ====================== */
+/* ==== Modal window ==== */
+/* ====================== */
+.fraim img {
+  width: 100%;
+  height: auto; }
+
 /* ================ */
 /* ==== Loader ==== */
 /* ================ */
