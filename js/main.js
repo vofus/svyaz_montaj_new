@@ -52,10 +52,10 @@ $(document).ready(function() {
 		if ($(".sandwich").is(":visible")) {
 			if ($(".sandwich").is(".active_sw")) {
 				$(".sandwich").removeClass("active_sw");
-				$("nav.navbar-main").fadeOut(600).removeClass("fadeInUp animated");
+				$("nav.navbar-second").fadeOut(600).removeClass("fadeInUp animated");
 			} else {
 				$(".sandwich").addClass("active_sw");
-				$("nav.navbar-main").fadeIn(600).addClass("fadeInUp animated");
+				$("nav.navbar-second").fadeIn(600).addClass("fadeInUp animated");
 			};
 		};
 	};

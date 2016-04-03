@@ -1,17 +1,31 @@
 /*==========  Desktop First Method  ========== */
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  nav.navbar-main {
+    display: block; }
+
+  nav.navbar-second {
+    display: none; } }
 /* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  nav.navbar-main {
+    display: block; }
+
+  nav.navbar-second {
+    display: none; } }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
   nav.navbar-main {
     display: none; }
-    nav.navbar-main span.navbar-brand {
-      position: absolute;
-      left: 0;
-      right: 0;
-      color: #fff;
-      float: none;
-      text-align: center;
+
+  nav.navbar-second span.navbar-brand {
+    position: absolute;
+    left: 0;
+    right: 0;
+    float: none;
+    text-align: center;
+    background-color: #222; }
+    nav.navbar-second span.navbar-brand:hover {
       background-color: #222; }
 
   div.toggle_menu {

@@ -36,16 +36,19 @@ body {
 .navbar-nav li a.active {
   color: #fff; }
 
-.navbar-main {
+.navbar-main,
+.navbar-second {
   z-index: 100; }
-  .navbar-main ul {
+  .navbar-main ul,
+  .navbar-second ul {
     float: none;
     text-align: center; }
-  .navbar-main span.navbar-brand {
-    color: #fff;
-    float: none;
-    text-align: center;
-    background-color: #222; }
+  .navbar-main span.navbar-brand,
+  .navbar-second span.navbar-brand {
+    color: #fff; }
+
+.navbar-second {
+  display: none; }
 
 .toggle_menu {
   display: none;
