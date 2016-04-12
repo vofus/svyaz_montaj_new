@@ -37,7 +37,10 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   #services .list_services li {
-    font-size: 1em; } }
+    font-size: 1em; }
+
+  #portfolio {
+    padding: 100px 0px 0px 0px; } }
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
   #services .list_services li {

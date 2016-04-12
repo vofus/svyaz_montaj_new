@@ -62,8 +62,14 @@ $(document).ready(function() {
 
 	function openModal() {
 		var imgSrc = $(this).children("img").attr("src");
+		var reg = /img\/portfolio_thumbnails\/(\d{2})\.jpg/i;
+		var idPhotos = reg.exec(imgSrc);
+
+		imgSrc = "img/portfolio/" + idPhotos[1] + ".jpg";
 		$("div.fraim img").attr('src', imgSrc);
+		
 		console.log(imgSrc);
+		console.log(idPhotos[1]);
 	};
 
 	heightDetect();
